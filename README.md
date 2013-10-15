@@ -18,6 +18,8 @@ Run these commands:
 `sudo apt-get update`  
 `sudo apt-get upgrade`  
 
+Note: Programs are also available via this repository.
+
 ###GIT (For ease of acquisition of some programs)
 
 Run this command:  
