@@ -149,3 +149,39 @@ ReadMode 0;
 
 
 
+
+
+$sum_p1_mem += $_ for @p1_mem;
+my $len_p1_mem = @p1_mem;
+$avg_p1_mem = $sum_p1_mem / $len_p1_mem;   
+
+#For process 2 "timidity"
+my $sum_p2_mem = my $avg_p2_mem = 0;
+$sum_p2_mem += $_ for @p2_mem;
+my $len_p2_mem = @p2_mem;
+$avg_p2_mem = $sum_p2_mem / $len_p2_mem;
+
+#For process 3 "aplaymidi"
+my $sum_p3_mem = my $avg_p3_mem = 0;
+$sum_p3_mem += $_ for @p3_mem;
+my $len_p3_mem = @p3_mem;
+$avg_p3_mem = $sum_p3_mem / $len_p3_mem;   
+
+#display test results to user
+print("Final Percentage Averages\n");
+print("-------------------------\n\n");
+printf("%-11s %-5s %-8s %-8s %-10s\n", 'Process', 'PID', 'CPU %', 'MEM %', 'CPU Time');
+printf("----------- ----- -------- -------- ----------\n");
+printf("%-11s %5d %8.2f %8.2f %10s\n", $p1, $p1_id, $avg_p1_cpu, $avg_p1_mem, $p1_time);
+printf("%-11s %5d %8.2f %8.2f %10s\n", $p2, $p2_id, $avg_p2_cpu, $avg_p2_mem, $p2_time);
+printf("%-11s %5d %8.2f %8.2f %10s\n\n", $p3, $p3_id, $avg_p3_cpu, $avg_p3_mem, $p3_time);
+
+#Kill aplaymidi if it is still running due to early exit from user
+if(my $aplaymidiID = `pidof $p3` eq ($p3_id))
+{
+   system("sudo kill $p3_id");
+}
+
+`sudo renice 0 -p $p2_id`;
+ReadMode 0;
+exit;        
