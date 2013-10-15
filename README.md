@@ -1,6 +1,6 @@
 # Musical Lights
 
-![preview](https://ftp.github.com/s3331816/musical-lights/tree/master/img/IMG_0039.JPG)
+![alt tag](https://raw.github.com/s3331816/musical-lights/tree/master/img/IMG_0039.JPG)
 A collaboration project that allows a user to use a MIDI file to play music through a speaker and sync with LEDs.
 
 - [Living demo](http://alvarotrigo.com/fullPage/)
@@ -16,14 +16,14 @@ Configured for the OS, Raspbian.
 Firstly ensure your Raspberry Pi is up-to-date.	
 
 Run these commands:
-`sudo apt-get update
-`sudo apt-get upgrade
+`sudo apt-get update`
+`sudo apt-get upgrade`
 
 ###GIT (For ease of acquisition of some programs)
 
 Run this command:
 
-`sudo apt-get install git-core
+`sudo apt-get install git-core`
 
 ###ALSA
 
@@ -40,28 +40,28 @@ ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.27.2.tar.bz2
 
 In the install directory, execute these commands:
 
-`tar jxvf alsa-lib-1.0.27.2.tar.bz2
-`./configure
-`make
-`make install
+`tar jxvf alsa-lib-1.0.27.2.tar.bz2`
+`./configure`
+`make`
+`make install`
 
 ###WiringPi
 
 WiringPi is a GPIO access library written in C for the BCM2835 used in the Raspberry Pi. 
 
 Via GIT:
-`git clone git://git.drogon.net/wiringPi
-`cd wiringPi
-`./build
+`git clone git://git.drogon.net/wiringPi`
+`cd wiringPi`
+`./build`
 
 Other (download one of the snapshots):
 
 https://git.drogon.net/?p=wiringPi;a=summary
 
 Run the following commands:
-`tar xfz wiringPi-98bcb20.tar.gz
-`cd wiringPi-98bcb20
-`./build
+`tar xfz wiringPi-98bcb20.tar.gz`
+`cd wiringPi-98bcb20`
+`./build`
 
 ###Timidity
 
@@ -69,7 +69,7 @@ Plays MIDI files by converting them into PCM waveform data, supports output to a
 
 Run this command:
 
-`apt-get install timidity
+`apt-get install timidity`
 
 ###Lightorgan
 
@@ -91,4 +91,4 @@ GPIO key for wiringPi pins: https://projects.drogon.net/raspberry-pi/wiringpi/pi
 
 Run the program with the following command (replacing <midi path> with the path to your MIDI file:
 
-`sudo nice -n -10 perl play.pl <midi path>
+`sudo nice -n -10 perl play.pl <midi path>`
