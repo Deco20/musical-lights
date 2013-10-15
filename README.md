@@ -3,8 +3,6 @@
 ![alt tag](https://github.com/s3331816/musical-lights/blob/master/img/IMG_0039.JPG?raw=true)
 A collaboration project that allows a user to use a MIDI file to play music through a speaker and sync with LEDs.
 
-- [Living demo](http://alvarotrigo.com/fullPage/)
-
 ## Introduction
 
 This version also contains testing for resources. 
