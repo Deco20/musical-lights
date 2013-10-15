@@ -18,7 +18,7 @@ Run these commands:
 `sudo apt-get update`  
 `sudo apt-get upgrade`  
 
-Note: Programs are also available via this repository.
+Note: Programs are also available via this repository within the /osp and /ProgramsAndLibraries directories.
 
 ###GIT (For ease of acquisition of some programs)
 
